@@ -1,0 +1,123 @@
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* --- Navigation Menu Styles --- */
+.navbar {
+    position: fixed; /* Keeps navigation visible on all pages/scrolls */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent; /* Start transparent */
+    transition: all 0.4s ease-in-out; /* Smooth transition for color/style change */
+    padding: 20px 0;
+}
+
+/* This class gets added by JavaScript when the user scrolls down */
+.navbar.scrolled {
+    background-color: #1a1a2e; /* Dark elegant background on scroll */
+    padding: 12px 0; /* Makes navbar slightly slimmer on scroll */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #00fff5;
+}
+
+.nav-container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+/* Interactive Hover Effects */
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1a1a2e;
+    background-color: #00fff5; /* Vibrantly changes style on hover */
+    box-shadow: 0 0 10px #00fff5;
+}
+
+/* --- Dummy Sections Styling --- */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #0f0c20 0%, #15102a 100%);
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #00fff5;
+}
+
+.content-section {
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.color-bg {
+    background-color: #e9ecef;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links li {
+        margin: 0 10px;
+    }
+}
